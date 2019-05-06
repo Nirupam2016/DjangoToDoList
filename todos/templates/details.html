@@ -1,0 +1,10 @@
+{% include 'partials/header.html' %}
+<a href="/todos">Go Back</a>
+<div class="container-fluid" align="center">
+<div class="card shadow my-5 w-75">
+ <h1 class="card-title">{{todo.title}}</h1>
+ <p class="card-text">{{todo.text}}</p>
+ <p class="card-text">Created on {{todo.created_at}}</p>
+</div>
+</div>
+{% include 'partials/footer.html' %}

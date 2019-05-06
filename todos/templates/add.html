@@ -1,0 +1,17 @@
+{% include 'partials/header.html' %}
+<a href="/todos">Go Back</a>
+<div class="container-fluid w-75 mt-5" align="center">
+<form action="{% url 'add' %}" method="post">
+{% csrf_token %}
+     <div class="form-group">
+          <label for="title">Title</label><br />
+          <input class="form-control" type="text" name="title" id="title" placeholder="Enter a ToDo title"/>
+     </div>
+     <div class="form-group">
+          <label for="text">Text</label><br />
+          <textarea class="form-control" name="text" id="text" placeholder="Enter a ToDo Description"></textarea>
+     </div>
+     <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{%include 'partials/footer.html' %}
